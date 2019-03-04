@@ -55,7 +55,7 @@ INSERT INTO products (productID, categoryID, productCode, productName, listPrice
 
 -- create the users and grant priveleges to those users
 GRANT SELECT, INSERT, DELETE, UPDATE
-ON my_guitar_shop1.*
+ON my_shoe_shop.*
 TO mgs_user@localhost
 IDENTIFIED BY 'pa55word';
 
