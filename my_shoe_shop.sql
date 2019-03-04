@@ -49,8 +49,7 @@ INSERT INTO products (productID, categoryID, productCode, productName, listPrice
 (16, 3, 'ari-lace-bootie-1', 'Ari Lace Bootie - Cognac', '415.00'),
 (17, 3, 'kelly-combat-boot', 'Kelly Combat Boot', '799.99'),
 (18, 3, 'jamie-bootie', 'Jamie Bootie', '499.99'),
-(19, 3, 'jazzy-bootie-nude', 'Jazzy Bootie - Nude', '699.99'),
-(20, 3, 'jazzy-bootie-leopard', 'Jazzy Bootie - Leopard', '799.99');
+(19, 3, 'jazzy-bootie-nude', 'Jazzy Bootie - Nude', '699.99');
 
 
 -- create the users and grant priveleges to those users
