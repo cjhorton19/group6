@@ -6,7 +6,9 @@
 -- Generation Time: Mar 04, 2019 at 10:20 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
-
+CREATE DATABASE my_shoe_shop;
+USE my_shoe_shop;
+ 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
@@ -18,7 +20,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
+/*--
 -- Database: `my_shoe_shop`
 --
 
@@ -26,27 +28,27 @@ SET time_zone = "+00:00";
 
 --
 -- Table structure for table `categories`
---
+--*/
 
 CREATE TABLE `categories` (
   `categoryID` int(11) NOT NULL,
   `categoryName` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
+/*--
 -- Dumping data for table `categories`
---
+--*/
 
 INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
 (1, 'Heels'),
 (2, 'Sandals'),
 (3, 'Boots');
 
--- --------------------------------------------------------
+/*-- --------------------------------------------------------
 
 --
 -- Table structure for table `orders`
---
+--*/
 
 CREATE TABLE `orders` (
   `orderID` int(11) NOT NULL,
@@ -54,11 +56,11 @@ CREATE TABLE `orders` (
   `orderDate` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
+/*-- --------------------------------------------------------
 
 --
 -- Table structure for table `products`
---
+--*/
 
 CREATE TABLE `products` (
   `productID` int(11) NOT NULL,
@@ -68,9 +70,9 @@ CREATE TABLE `products` (
   `listPrice` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
+/*--
 -- Dumping data for table `products`
---
+--*/
 
 INSERT INTO `products` (`productID`, `categoryID`, `productCode`, `productName`, `listPrice`) VALUES
 (1, 1, 'trina-heel', 'Trina Heel - Black', '34.99'),
@@ -93,48 +95,48 @@ INSERT INTO `products` (`productID`, `categoryID`, `productCode`, `productName`,
 (18, 3, 'jamie-boot', 'Jamie Bootie', '499.99'),
 (19, 3, 'jazzy-boot', 'Jazzy Bootie - Nude', '699.99');
 
---
+/*--
 -- Indexes for dumped tables
 --
 
 --
 -- Indexes for table `categories`
---
+--*/
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`categoryID`);
 
---
+/*--
 -- Indexes for table `orders`
---
+--*/
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`orderID`);
 
---
+/*--
 -- Indexes for table `products`
---
+--*/
 ALTER TABLE `products`
   ADD PRIMARY KEY (`productID`),
   ADD UNIQUE KEY `productCode` (`productCode`);
 
---
+/*--
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
 -- AUTO_INCREMENT for table `categories`
---
+--*/
 ALTER TABLE `categories`
   MODIFY `categoryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
---
+/*--
 -- AUTO_INCREMENT for table `orders`
---
+--*/
 ALTER TABLE `orders`
   MODIFY `orderID` int(11) NOT NULL AUTO_INCREMENT;
 
---
+/*--
 -- AUTO_INCREMENT for table `products`
---
+--*/
 ALTER TABLE `products`
   MODIFY `productID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
@@ -142,3 +144,14 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+/*-- create the users and grant priveleges to those users*/
+GRANT SELECT, INSERT, DELETE, UPDATE
+ON my_shoe_shop.*
+TO mgs_user@localhost
+IDENTIFIED BY 'pa55word';
+
+GRANT SELECT
+ON products
+TO mgs_tester@localhost
+IDENTIFIED BY 'pa55word';
