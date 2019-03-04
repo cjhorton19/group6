@@ -3,10 +3,10 @@ function get_categories() {
     global $db;
     $query = 'SELECT *,
                 (SELECT COUNT(*)
-                 FROM products
-                 WHERE Products.categoryID = Categories.categoryID)
+                 FROM products p
+                 WHERE p.categoryID = c.categoryID)
                  AS productCount
-              FROM categories
+              FROM categories c
               ORDER BY categoryID';
     try {
         $statement = $db->prepare($query);
