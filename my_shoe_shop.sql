@@ -1,5 +1,6 @@
 -- create and select the database
 CREATE DATABASE my_shoe_shop;  -- MySQL command
+USE my_shoe_shop;
 
 -- create the tables
 CREATE TABLE categories (
