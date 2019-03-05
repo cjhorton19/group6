@@ -51,8 +51,22 @@ INSERT INTO products (productID, categoryID, productCode, productName, listPrice
 (17, 3, 'kelly-combat-boot', 'Kelly Combat Boot', '799.99'),
 (18, 3, 'jamie-bootie', 'Jamie Bootie', '499.99'),
 (19, 3, 'jazzy-bootie-nude', 'Jazzy Bootie - Nude', '699.99');
-
-
+(20, 1, 'angelica-heel-red', 'Angelica Heel - Red Snake', '32.99'),
+(21, 1, 'kiara-heel-red', 'Kiara Heel - Red', '37.99'),
+(22, 1, 'ester-heel-black', 'Ester Heel - Black', '33.99'),
+(23, 1, 'grace-heel-nude', 'Grace Heel - Nude', '37.99'),
+(24, 1, 'amanda-heel-ice', 'Amanda Heel - Ice', '39.99'),
+(25, 1, 'jonie-heel-brown', 'Jonie Heel - Brown Snake', '39.99'),
+(26, 1, 'lali-heel-sage', 'Lali Heel - Sage', '35.99'),
+(27, 1, 'sophia-heel-blue', 'Sophia Heel - Baby Blue', '38.99'),
+(28, 2, 'lauren-sandal-black', 'Lauren Sandal - Black', '19.99'),
+(29, 2, 'jenny-slide-pink', 'Jenny Slide - Pink Crocodile', '19.99'),
+(30, 2, 'cece-sandal-pink', 'Cece Sandal - Hot Pink', '19.99'),
+(31, 2, 'barbie-slipper-black', 'Barbie Slipper - Black', '34.99'),
+(32, 2, 'tanya-slide-grey', 'Tanya Slide - Grey', '21.00'),
+(33, 3, 'lydia-bootie-grey', 'Lydia Bootie - Grey', '38.99'),
+(34, 3, 'melly-boot-black', 'Melly Boot - Black', '48.99'),
+(35, 3, 'chelsea-bootie-black', 'Chelsea Bootie - Black', '37.00'),
 -- create the users and grant priveleges to those users
 GRANT SELECT, INSERT, DELETE, UPDATE
 ON my_shoe_shop.*
