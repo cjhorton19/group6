@@ -50,7 +50,7 @@ INSERT INTO products (productID, categoryID, productCode, productName, listPrice
 (16, 3, 'ari-lace-bootie-1', 'Ari Lace Bootie - Cognac', '38.99'),
 (17, 3, 'kelly-combat-boot', 'Kelly Combat Boot', '34.99'),
 (18, 3, 'jamie-bootie', 'Jamie Bootie', '37.99'),
-(19, 3, 'jazzy-bootie-nude', 'Jazzy Bootie - Nude', '39.99');
+(19, 3, 'jazzy-bootie-nude', 'Jazzy Bootie - Nude', '39.99'),
 (20, 1, 'angelica-heel-red', 'Angelica Heel - Red Snake', '32.99'),
 (21, 1, 'kiara-heel-red', 'Kiara Heel - Red', '37.99'),
 (22, 1, 'ester-heel-black', 'Ester Heel - Black', '33.99'),
@@ -66,7 +66,8 @@ INSERT INTO products (productID, categoryID, productCode, productName, listPrice
 (32, 2, 'tanya-slide-grey', 'Tanya Slide - Grey', '21.00'),
 (33, 3, 'lydia-bootie-grey', 'Lydia Bootie - Grey', '38.99'),
 (34, 3, 'melly-boot-black', 'Melly Boot - Black', '48.99'),
-(35, 3, 'chelsea-bootie-black', 'Chelsea Bootie - Black', '37.00'),
+(35, 3, 'chelsea-bootie-black', 'Chelsea Bootie - Black', '37.00');
+
 -- create the users and grant priveleges to those users
 GRANT SELECT, INSERT, DELETE, UPDATE
 ON my_shoe_shop.*
