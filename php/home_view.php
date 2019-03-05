@@ -13,12 +13,13 @@
         $unit_price = $list_price;
       
     ?>
-        <tr>
-            <td class="product_image_column" >
-                <img src="images/<?php echo htmlspecialchars($product['productCode']); ?>_s.png"
+        <div class="mainFrame">
+        
+            <div class="imgDiv" >
+                <img class="backImg" src="images/<?php echo htmlspecialchars($product['productCode']); ?>_s.png"
                      alt="&nbsp;">
-            </td>
-            <td>
+            </div>
+            
                 <p>
                     <a href="catalog?product_id=<?php echo
                            $product['productID']; ?>">
@@ -29,9 +30,11 @@
                     <b>Your price:</b>
                     $<?php echo number_format($unit_price, 2); ?>
                 </p>
-            </td>
-        </tr>
+            
+        
+        </div>
     <?php endforeach; ?>
+        
     </table>
 </main>
 <?php include 'view/footer.php'; ?>
