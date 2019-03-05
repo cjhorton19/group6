@@ -132,4 +132,18 @@ function delete_product($product_id) {
         display_db_error($error_message);
     }
 }
+function sort_product_name() {
+    global $db;
+    $query = 'SELECT productName FROM products SORT BY ASC';
+    try {
+        $statement = $db->prepare($query);
+        $statement->execute();
+        $result = $statement->fetchAll();
+        $statement->closeCursor();
+        return $result;
+    } catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        display_db_error($error_message);
+    }
+}
 ?>
