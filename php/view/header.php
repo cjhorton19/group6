@@ -10,5 +10,5 @@
 
 <body>
 <header>
-    <h1>My Guitar Shop</h1>
+    <h1>My Shoe Shop</h1>
 </header>
