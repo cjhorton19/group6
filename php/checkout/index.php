@@ -7,15 +7,15 @@ require_once('model/cart.php');
 require_once('model/product_db.php');
 require_once('model/order_db.php');
 require_once('model/customer_db.php');
-require_once('model/address_db.php');?>
+require_once('model/address_db.php');
 
-<!--get the data from the form-->
-$item = filter_input(INPUT_POST, 'name');
-$item = filter_input(INPUT_POST, 'unit_price',FILTER_VALIDATE_FLOAT);
-$item = filter_input(INPUT_POST, 'quantity');
+//get the data from the form
+$name = filter_input(INPUT_POST, 'name');
+$unit_price = filter_input(INPUT_POST, 'unit_price',FILTER_VALIDATE_FLOAT);
+$quantity = filter_input(INPUT_POST, 'quantity', FILTER_VALIDATE_INT);
 $subtotal = filter_input(INPUT_POST, 'subtotal',FILTER_VALIDATE_FLOAT);
 $total = filter_input(INPUT_POST, 'total',FILTER_VALIDATE_FLOAT);
-
+?>
 <main>
     <h1>Order Confirmation</h1>
     <table id="cart">
@@ -28,12 +28,12 @@ $total = filter_input(INPUT_POST, 'total',FILTER_VALIDATE_FLOAT);
         <?php foreach ($cart as $product_id => $item) : ?>
             <tr>
                 <td><?php echo htmlspecialchars($item['name']); ?></td>
-                <td class="right">
+                <td class="right"> <br>
                     <?php echo sprintf('$%.2f', $item['unit_price']); ?>
                 </td>
-                <td class="right">
+                <td class="right"> <br>
                     <?php echo $item['quantity']; ?>
-                </td>
+                </td> <br>
             </tr>
         <?php endforeach; ?>
         <tr id="cart_footer">
