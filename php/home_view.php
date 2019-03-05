@@ -1,5 +1,4 @@
 <?php include 'view/header.php'; ?>
-<?php include 'view/navbar.php'; ?>
 <main class="nofloat">
     <h1>Featured products</h1>
     <p>We have a great selection of the latest fashionable shoes.
@@ -16,7 +15,7 @@
         <div class="mainFrame">
         
             <div class="imgDiv" >
-                <img class="backImg" src="images/<?php echo htmlspecialchars($product['productCode']); ?>_s.png"
+                <img class="backImg" src="images/<?php echo htmlspecialchars($product['productCode']); ?>.jpg"
                      alt="&nbsp;">
             </div>
             
