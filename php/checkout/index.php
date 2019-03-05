@@ -9,6 +9,13 @@ require_once('model/order_db.php');
 require_once('model/customer_db.php');
 require_once('model/address_db.php');?>
 
+<!--get the data from the form-->
+$item = filter_input(INPUT_POST, 'name');
+$item = filter_input(INPUT_POST, 'unit_price',FILTER_VALIDATE_FLOAT);
+$item = filter_input(INPUT_POST, 'quantity');
+$subtotal = filter_input(INPUT_POST, 'subtotal',FILTER_VALIDATE_FLOAT);
+$total = filter_input(INPUT_POST, 'total',FILTER_VALIDATE_FLOAT);
+
 <main>
     <h1>Order Confirmation</h1>
     <table id="cart">
